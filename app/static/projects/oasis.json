@@ -1,0 +1,36 @@
+{
+        "name": "Oasis",
+        "genre": "First-Person Shooter",
+        "description": "Oasis is a first person game all about the loot. Grab loot to get more and better loot. With over 7 billion guns in the game it is easy to grab to many of them.",
+        "contributions": {
+                "Modular Weapons": null,
+                "Animations": null,
+                "Shading pipeline": [
+                        "Deffered rendering",
+                        "SSAO"
+                ],
+                "Optimizing": null,
+                "Sound": null,
+                "Culling": null,
+                "Script system": null
+        },
+        "images": [
+                "0.jpg",
+                "1.jpg",
+                "2.jpg",
+                "3.jpg",
+                "4.jpg"
+        ],
+        "details": {
+                "9 weeks, half time": null,
+                "Created with our own engine": null,
+                "C++": null,
+                "3rd party libraries: Directx11, PhysX, Wwise, LUA and TinyXML2": null,
+                "Created by Studio Smithereen": [
+                        "3 Artists",
+                        "2 Level Designers",
+                        "6 Programmers"
+                ]
+        },
+        "trailer": "https://www.youtube.com/embed/88fgsZi4lJ0"
+}

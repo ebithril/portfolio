@@ -1,0 +1,37 @@
+{
+        "name": "Aphelion",
+        "genre": "Space Shooter",
+        "description": "Aphelion is a space shooter that is the first game made by Studio Smithereen.",
+        "contributions": [
+                "Shading Pipeline",
+                "Particles",
+                "Streaks",
+                "Culling",
+                "Bugfixing",
+                "Memory optimization",
+                "Sound",
+                "Optimizing",
+                "AI",
+                "Collision Export"
+        ],
+        "images": [
+                "0.jpg",
+                "1.jpg",
+                "2.jpg",
+                "3.jpg",
+                "4.jpg",
+                "5.jpg"
+        ],
+        "details": {
+                "10 weeks, half time": null,
+                "Created with our own engine": null,
+                "C++": null,
+                "3rd party libraries: Directx11, Wwise and TinyXML2": null,
+                "Created by Studio Smithereen": [
+                        "3 Artists",
+                        "2 Level Designers",
+                        "6 Programmers"
+                ]
+        },
+        "trailer": "https://www.youtube.com/embed/h7VTc6FygOQ"
+}

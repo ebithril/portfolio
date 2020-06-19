@@ -1,0 +1,34 @@
+{
+        "name": "Godling",
+        "genre": "Real Time Strategy",
+        "description": "Godling is a real time strategy game where you play as a hero that is trying to become the next god.",
+        "contributions": {
+                "Animations": null,
+                "Particles": null,
+                "Sound": null,
+                "Memory optimization": null,
+                "Shading Pipeline": null,
+                "Optimizing": null,
+                "AI": null,
+                "Script System": null
+        },
+        "images": [
+                "0.jpg",
+                "1.jpg",
+                "2.jpg",
+                "3.jpg",
+                "4.jpg"
+        ],
+        "details": {
+                "10 weeks, half time": null,
+                "Created with our own engine": null,
+                "C++": null,
+                "3rd party libraries: DirectX, Wwise, LUA and TinyXML2": null,
+                "Created by Studio Smithereen": [
+                        "3 Artists",
+                        "2 Level Designers",
+                        "6 Programmers"
+                ]
+        },
+        "trailer": "https://www.youtube.com/embed/wa9fHCD9wJ8"
+}

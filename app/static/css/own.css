@@ -1,0 +1,41 @@
+.navbar-brand,
+.navbar-header li a {
+    height: 40px;
+    padding-top: 5px;
+    padding-right: 4px;
+    font-size: 18px;
+    line-height: 20px;
+}
+.navbar-brand > img {
+  display: table-cell;
+}
+.navbar-toggle > img {
+  display: table-cell;
+}
+.navbar-nav li a {
+    height: 50px;
+    padding-top: 15px;
+}
+body {
+	background-color: #EEEEEE;
+}
+
+
+.portfolio_item,
+.portfolio {
+	/*background:url('../images/background.jpg') no-repeat right top;*/
+	background-color: #FFFFFF;
+	box-shadow: 1px 1px 4px #888888;
+}
+
+h2 {
+	margin-top: -5px;
+}
+
+small {
+	font-size: 70%;
+}
+
+html {
+       overflow-y: scroll;
+}

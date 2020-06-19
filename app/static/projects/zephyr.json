@@ -1,0 +1,45 @@
+{
+        "name": "Zephyr",
+        "genre": "Shoot 'Em Up",
+        "description": "Zephyr is a Luftrausers inspired shoot em up.",
+        "contributions": {
+                "AI": null,
+                "Optimizing": null,
+                "Sound": null,
+                "World wrapping": null,
+                "Camera": [
+                        "Movement",
+                        "Zoom",
+                        "Camerashake"
+                ],
+                "Loading Screen": null,
+                "Threading": null,
+                "Mission brief": null,
+                "AOE Explosion": null,
+                "Minimap": null,
+                "Gameplay": null,
+                "Bugfixing": null,
+                "Memory optimization": null,
+                "Rendering Layers": null,
+                "Parallaxes": null,
+                "Collision": null
+        },
+        "images": [
+                "0.jpg",
+                "1.jpg",
+                "2.jpg",
+                "3.jpg",
+                "4.jpg"
+        ],
+        "details": {
+                "8 weeks, half time": null,
+                "C++": null,
+                "3rd party libraries: HGE, FMOD and TinyXML2": null,
+                "Created by Six Shooter Studios": [
+                        "3 Artists",
+                        "2 Level Designers",
+                        "4 Programmers"
+                ]
+        },
+        "trailer": "https://www.youtube.com/embed/mqSm_foIYGk"
+}

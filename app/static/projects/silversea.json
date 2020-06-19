@@ -1,0 +1,31 @@
+{
+        "name": "Silver Sea",
+        "genre": "Turn Based Strategy",
+        "description": "Silver Sea is a turn based strategy game where you play as three heros that try to restor balance in the underworld.",
+        "contributions": {
+                "Sound": null,
+                "Particle Editor": null,
+                "Title Selection": null,
+                "Pathfinding": null,
+                "Level Loading": null,
+                "Memory Optimization": null
+        },
+        "images": [
+                "0.jpg",
+                "1.jpg",
+                "2.jpg",
+                "3.jpg",
+                "4.jpg"
+        ],
+        "details": {
+                "8 weeks, half time": null,
+                "C++": null,
+                "3rd party libraries: HGE, FMOD and TinyXML2": null,
+                "Created by Six Shooter Studios": [
+                        "3 Artists",
+                        "2 Level Designers",
+                        "4 Programmers"
+                ]
+        },
+        "trailer": "https://www.youtube.com/embed/mqSm_foIYGk"
+}

@@ -1,0 +1,150 @@
+{% extends "base.html" %}
+
+{% block head %}
+        {{ super() }}
+{% endblock %}
+
+{% block content %}
+        <!-- The Bootstrap Image Gallery lightbox, should be a child element of the document body -->
+        <div id="blueimp-gallery" class="blueimp-gallery" data-use-bootstrap-modal="false">
+            <!-- The container for the modal slides -->
+            <div class="slides"></div>
+            <!-- Controls for the borderless lightbox -->
+            <h3 class="title"></h3>
+            <a class="prev">‹</a>
+            <a class="next">›</a>
+            <a class="close">×</a>
+            <a class="play-pause"></a>
+            <ol class="indicator"></ol>
+            <!-- The modal dialog, which will be used to wrap the lightbox content -->
+            <div class="modal fade">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" aria-hidden="true">&times;</button>
+                            <h4 class="modal-title"></h4>
+                        </div>
+                        <div class="modal-body next"></div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default pull-left prev">
+                                <i class="glyphicon glyphicon-chevron-left"></i>
+                                Previous
+                            </button>
+                            <button type="button" class="btn btn-primary next">
+                                Next
+                                <i class="glyphicon glyphicon-chevron-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Page Content -->
+        <div class="container portfolio_item">
+
+        <!-- Page Heading/Breadcrumbs -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">
+                        <small>{{ projects[project]['genre'] }}</small>
+                        <br/>{{ projects[project]['name'] }}
+                </h1>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Portfolio Item Row -->
+        <div class="row">
+
+            <div class="col-md-8">
+                <!--h3 class="page-header">Screenshots</h3-->
+                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                        {% for i in range(1, projects[project]['images']|length) %}
+                                <li data-target="#carousel-example-generic" data-slide-to="{{ i }}"></li>
+                        {% endfor %}
+                    </ol>
+
+                    <!-- Wrapper for slides-->
+                    <div class="carousel-inner">
+                        <div class="item active">
+                                <a href={{ url_for('static', filename='images/%s/%s' % ( projects[project]['name'].lower(), projects[project]['images'][0])) }} data-gallery>
+                                        <img class="img-responsive" src={{ url_for('static', filename='images/%s/thumb/%s' % ( projects[project]['name'].lower(), projects[project]['images'][0])) }} alt="">
+                            </a>
+                        </div>
+                        {% for i in range(1, projects[project]['images']|length) %}
+                        <div class="item">
+                                <a href={{ url_for('static', filename='images/%s/%s' % ( projects[project]['name'].lower(), projects[project]['images'][i])) }} data-gallery>
+                                        <img class="img-responsive" src={{ url_for('static', filename='images/%s/thumb/%s' % ( projects[project]['name'].lower(), projects[project]['images'][i])) }} alt="">
+                            </a>
+                        </div>
+                        {% endfor %}
+                    </div>
+
+                    <!-- Controls -->
+                    <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                    </a>
+                    <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                    </a>
+                </div>
+                <br/>
+                <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src={{ projects[project]['trailer'] }}></iframe>
+                 </div>
+                 <br/>
+            </div>
+
+            <div class="col-md-4">
+                <h3>Description</h3>
+                <p>{{ projects[project]['description'] }}</p>
+
+                <h3>My contributions</h3>
+                <ul>
+                {% for contribution in projects[project]['contributions'] %}
+                        <li>{{ contribution }}</li>
+                        {% if projects[project]['contributions'][contribution] != None %}
+                        <ul>
+                                {% for subpoint in projects[project]['contributions'][contribution] %}
+                                        <li>{{ subpoint }}</li>
+                                {% endfor %}
+                        </ul>
+                        {% endif %}
+                {% endfor %}
+                </ul>
+
+                <h3>Project details</h3>
+                <ul>
+                {% for detail in projects[project]['details'] %}
+                        <li>{{ detail }}</li>
+                        {% if projects[project]['details'][detail] != None %}
+                        <ul>
+                                {% for subpoint in projects[project]['details'][detail] %}
+                                        <li>{{ subpoint }}</li>
+                                {% endfor %}
+                        </ul>
+                        {% endif %}
+                {% endfor %}
+                </ul>
+            </div>
+
+        </div>
+        </div>
+        <!-- /.container -->
+
+        <br/>
+        <br/>
+
+        <!-- jQuery -->
+        <script src={{ url_for('static', filename='js/jquery.js') }}></script>
+
+        <!-- Bootstrap Core JavaScript -->
+        <script src={{ url_for('static', filename='js/bootstrap.min.js') }}></script>
+
+        <script src={{ url_for('static', filename='js/jquery.blueimp-gallery.min.js') }}></script>
+        <script src={{ url_for('static', filename='js/bootstrap-image-gallery.min.js') }}></script>
+{% endblock %}
